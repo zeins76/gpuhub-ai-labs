@@ -25,13 +25,13 @@ print("CUDA available:", torch.cuda.is_available())
 print("GPU name:", torch.cuda.get_device_name(0))
 print("Total VRAM (GB):", round(torch.cuda.get_device_properties(0).total_memory / 1024**3, 2))
 
-# Simple tensor test
+## Simple tensor test
 x = torch.randn((4096, 4096), device="cuda")
 y = torch.matmul(x, x)
 print("Matmul done, tensor shape:", y.shape)
 
 
-Output on GPUHub (NVIDIA GeForce RTX 5090):
+## Output on GPUHub (NVIDIA GeForce RTX 5090):
 
 CUDA available: True
 GPU name: NVIDIA GeForce RTX 5090
