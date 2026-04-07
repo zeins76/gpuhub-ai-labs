@@ -1,0 +1,25 @@
+[GPU sanity check on GPUHub]
+
+Environment:
+  - Provider : GPUHub
+  - Host : connect.singapore-b.gpuhub.com
+  - Access : SSH + JupyterLab
+  - Date : 2026-04-07 (UTC)
+
+PyTorch CUDA check:
+
+CUDA available: True
+GPU name: NVIDIA GeForce RTX 5090
+Total VRAM (GB): 31.36
+
+Simple matmul test:
+
+x = torch.randn((4096, 4096), device="cuda")
+y = torch.matmul(x, x)
+
+Matmul done, tensor shape: torch.Size([4096, 4096])
+
+Notes:
+  - Confirms that CUDA is available and PyTorch can run basic GPU workloads
+    on an NVIDIA GeForce RTX 5090 (≈31.36 GB reported by PyTorch) via GPUHub.
+  - This log serves as the initial sanity check before running heavier SDXL / ComfyUI benchmarks.
