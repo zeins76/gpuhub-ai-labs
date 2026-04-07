@@ -40,6 +40,6 @@ Matmul done, tensor shape: torch.Size([4096, 4096])
 
 This confirms that:
 
-• CUDA is working correctly,
-• the GPU has enough VRAM for heavier experiments (SDXL, LoRA, etc.),
-• and the environment is ready for the actual labs in this repo.
+- CUDA is working correctly,
+- the GPU has enough VRAM for heavier experiments (SDXL, LoRA, etc.),
+- and the environment is ready for the actual labs in this repo.
